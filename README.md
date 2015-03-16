@@ -1,22 +1,12 @@
-Am I in Las Vegas?
+Am I in Miami?
 ==================
 
-Sometimes it's hard to know, because the city limits have the complexity of a fractal curve.
-
-http://amiinlasvegas.com/
-
-### Press!
-
-* ["An Interactive Map Shows Leaving Las Vegas Is Easier Than You Think"](http://www.citylab.com/politics/2014/12/an-interactive-map-shows-leaving-las-vegas-is-easier-than-you-think/383297/) - [Laura Bliss](https://twitter.com/mslaurabliss), _CityLab_, December 2, 2014
-* ["Are you in Las Vegas? You may be surprised"](http://www.lasvegassun.com/news/2014/dec/14/are-you-las-vegas-you-may-be-surprised/) - Ed Komenda, _Las Vegas Sun_, December 14, 2014
-
-More info at [Code for America](http://www.codeforamerica.org/governments/lasvegas/).
-
+Sometimes it's hard to know, because there are 34 municipalities, plus the unincorporated municipal service area (UMSA).
 
 Install
 -------
 
-‘Am I In Las Vegas’ (AIILV) is a Node application written in Javascript.
+‘Am I In Miami’ (AIIM) is a Node application written in Javascript, based on [Am I In Las Vegas] (http://amiinlasvegas.com/). 
 
 1. On a plain Ubuntu system, install the `nodejs` and `npm` packages.
 
@@ -26,7 +16,7 @@ Install
 
     npm install express
     
-#### Install on a Mac using Terminal #### 
+Install on a Mac using Terminal
 
 1. install node.js and npm
 2. <code>npm install express</code>
@@ -36,9 +26,9 @@ Install
 Run
 ---
 
-To run AIILV:
+To run AIIM:
 
-    node server.js
+    <code>node server.js</code>
 
 Build assets
 ------------
@@ -73,12 +63,3 @@ Browser support
 - Safari - current and one previous version
 - Internet Explorer 9 and above (IE8 is not supported, but there are hooks for fleshing out backwards compatibility and support should that ever become necessary)
 - Mobile support: yes, but no specific minimum browsers targeted
-
-Need an official address checker?
----------------------------------
-
-Try these:
-
-* [Business licensing jurisdiction](http://www.lasvegasnevada.gov/Apply/27541.htm)
-* [Report a problem](http://m.lasvegasnevada.gov/ReportProblem.aspx) form via the City of Las Vegas mobile site
-* [CLV GIS Geo services](http://clvplaces.appspot.com/) if you are more of a GIS-minded person
