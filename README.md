@@ -10,18 +10,18 @@ Install
 
 1. On a plain Ubuntu system, install the `nodejs` and `npm` packages.
 
-    apt-get install -y nodejs npm
+        apt-get install -y nodejs npm
 
-2. Install the additional Node `express` module:
+2. Install the additional Node `express` 
 
-    npm install express
+        npm install express
     
 Install on a Mac using Terminal
 
-1. install node.js and npm
-2. <code>npm install express</code>
-3. <code>npm install</code>
-4. <code>npm install -g gulp</code> (May need sudo for this)
+1. install node.js and npm -- for more information, see this [howto](https://github.com/codeforamerica/howto/blob/master/Node.js.md)
+2. `npm install express`
+3. `npm install`
+4. `npm install -g gulp` (May need sudo for this)
 
 Run
 ---
@@ -33,9 +33,10 @@ To run AIIM:
 Build assets
 ------------
 
-In order to build the assets, you need to install gulp (npm install -g gulp).
+In order to build the assets, you need to install gulp (`npm install -g gulp`).
 
 You are of course free to use the locally installed gulp node module if you prefer.
+
     node node_modules/gulp/bin/gulp.js
 
 If you only want to run the SVG compiler and js compile, simply run gulp.
@@ -52,9 +53,9 @@ Stylesheets are now auto-generated from source [SCSS](http://sass-lang.com/) in 
 Gotcha
 ---------------
 
-On 3/12/15, "npm run-script watch" and "npm run-script test" failed due to a Browserify glitch. 
+On 3/12/15, `npm run-script watch` and `npm run-script test` failed due to a Browserify glitch. 
 
-Changing <code>"watchify": "^2.4.0"</code> in package.json to <code>"watchify": "0.8.1"</code> resolves the error, but potentially causes others. Proceed with caution.
+Changing `"watchify": "^2.4.0"` in package.json to `"watchify": "0.8.1"` resolves the error, but potentially causes others. Proceed with caution.
 
 Browser support
 ---------------
