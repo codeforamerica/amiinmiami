@@ -28,7 +28,7 @@ Run
 
 To run AIIM:
 
-    <code>node server.js</code>
+    node server.js
 
 Build assets
 ------------
