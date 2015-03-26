@@ -196,13 +196,13 @@ function onClickReset (e) {
  * Renders the answer and drops the pin on the map
  */
 
-function setAnswer (answer) {
+function setAnswer (answer, munipalityname) {
   // Include a message providing further information.
   // Currently, it's just a simple restatement of the
   // answer.  See GitHub issue #6.
   var detail
   if (answer === 'Yes') {
-    detail = config.responseYes
+    detail = munipalityname
   } else {
     detail = config.responseNo
   }
@@ -233,11 +233,24 @@ function checkWithinLimits (latitude, longitude) {
     type: 'Point',
     coordinates: [ longitude, latitude ]
   }
-  var polygon = json.features[0].geometry
-  var withinLimits = gju.pointInPolygon(point, polygon)
+  var munipalityname = '';
 
-  if (withinLimits) {
-    onWithinLimits()
+  // Oh you guys, this is so ratchet. -ehsiung
+  for (var i=0; i < json.features.length; i++) {
+    var objMunicipality = json.features[i];
+    var polygon = objMunicipality.geometry;
+    var withinLimits = gju.pointInPolygon(point, polygon);
+    if (withinLimits) {
+      if (!objMunicipality.properties || !objMunicipality.properties.NAME) {
+        munipalityname = 'NO NAME FOUND';
+      } else {
+        munipalityname = objMunicipality.properties.NAME;
+      }
+    }
+  }
+
+  if (munipalityname) {
+    onWithinLimits(munipalityname)
   } else {
     onOutsideLimits()
   }
@@ -248,8 +261,8 @@ function checkWithinLimits (latitude, longitude) {
  * is within the limits
  */
 
-function onWithinLimits () {
-  setAnswer('Yes')
+function onWithinLimits (munipalityname) {
+  setAnswer('Yes', munipalityname)
 }
 
 /**
