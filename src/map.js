@@ -56,9 +56,26 @@ LeafletMap.prototype.render = function () {
     maxZoom: 23
   }).addTo(this.map)
 
+/*
   L.geoJson(this.json, {
     style: REGION_LAYER_STYLE
   }).addTo(this.map)
+ */
+
+  L.geoJson(this.json, {
+    style: function() {
+      var r = Math.floor(Math.random() * 255);
+      var g = Math.floor(Math.random() * 255);
+      var b = Math.floor(Math.random() * 255);
+      var randomcolor = "rgb("+r+" ,"+g+","+ b+")";
+      return {
+        color: randomcolor,
+        weight: 5,
+        opacity: 0.1
+      };
+    }
+  }).addTo(this.map)
+
 
   this.reset()
 }
