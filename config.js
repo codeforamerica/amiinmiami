@@ -1,15 +1,15 @@
 var config = {
-  name: 'Miami',
+  name: 'Miami-Dade County',
   latitude: 25.7667,
   longitude: -80.2000,
   regionBias: '25.25,-80|26,-79',//'35.773258,-115.642090|36.469890,-114.636840', //25.7667° N, 80.2000° W
   initialZoom: 13,
   finalZoom: 14,
   fileName: '/data/region.geojson',
-  tagline: 'Because there is more to Miami than you think there is.',
-  about: 'Las Vegas is one of the most visited cities in the world, and yet its most famous destination &mdash; a 6.8km boulevard of extravagantly themed casinos commonly known as ‘The Strip’ &mdash; is actually located outside of Las Vegas city limits.  To add to the confusion, the city’s true borders are often jagged and full of small holes.  According to the U.S. Postal Service, local residents may still claim a Las Vegas address, even if they are under the jurisdiction of one of the surrounding unincorporated communities throughout Clark County.  As a result, the City of Las Vegas requires residents verify that they reside within city limits to receive city services.',
-  responseYes: 'You are within city limits!',
-  responseNo: 'You\'re UMSA or not in the County.',
+  tagline: 'Are you getting city services from a city, or from Miami-Dade County?',
+  about: 'Miami-Dade County is the seventh largest county in the nation with 34 municipalities, but also an unincorporated municipal service area (UMSA) that services more than a million people. Use this app to figure out whether an address is in a city or within UMSA!',
+  responseYes: 'You are living inside a Miami-Dade municipality.',
+  responseNo: 'You\'re living in an unincorporated area of the county.',
   examples: [
     '90 NW 29th Street',
     '9806 NE 2nd Ave',
