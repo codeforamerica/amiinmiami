@@ -3,12 +3,12 @@
 
 var config = require('../config')
 var MAP_ATTRIBUTION = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-var TILE_LAYER_URL = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png'
+var TILE_LAYER_URL = 'https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'
 var MARKER_IMAGE_FILE = '/img/marker.svg'
 
 // Retina tiles
 if (window.devicePixelRatio > 1) {
-  TILE_LAYER_URL = 'http://tile.stamen.com/toner/{z}/{x}/{y}@2x.png'
+  TILE_LAYER_URL = 'https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}@2x.png'
 }
 
 // Fallback for no SVG support
@@ -23,7 +23,7 @@ var REGION_LAYER_STYLE = {
 }
 
 var LeafletMap = function (json) {
-  this.json = json
+  this.json = json;
 
   this.map = L.map('map', {
     dragging: false,
